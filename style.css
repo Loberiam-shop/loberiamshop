@@ -1,100 +1,110 @@
 
+/* Reset básico */
+body, h1, h2, p, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  padding: 0;
+  margin: 0;
 }
-header {
-    background: #111;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
-.logo {
-    display: flex;
-    align-items: center;
+
+/* Header / Menu */
+.topo {
+  background-color: #111;
+  color: #fff;
+  padding: 10px 20px;
 }
-.logo img {
-    height: 40px;
-    margin-right: 10px;
+
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.topo .logo {
+  height: 40px;
+}
+
 nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
 }
-.hero {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    background: white;
+
+nav a:hover,
+nav a.ativo {
+  text-decoration: underline;
 }
-.hero-text {
-    max-width: 50%;
+
+/* Seção sobre */
+main.sobre {
+  padding: 40px 20px;
 }
-.hero-text h1 {
-    font-size: 2.5rem;
+
+main.sobre h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
-.hero-text ul {
-    list-style: none;
-    padding: 0;
+
+main.sobre p {
+  margin-bottom: 30px;
+  font-size: 16px;
 }
-.hero-text .btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+
+/* Missão e valores lado a lado */
+.missao-valores {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
 }
-.hero-img img {
-    max-width: 400px;
+
+.missao-valores div {
+  flex: 1 1 45%;
 }
-.produtos, .categorias, .como-funciona {
-    padding: 2rem;
+
+.missao-valores img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 15px;
 }
-.cards {
-    display: flex;
-    gap: 1rem;
+
+.missao-valores h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-.card {
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    text-align: center;
+
+.missao-valores p {
+  font-size: 15px;
+  line-height: 1.6;
 }
-.card img {
-    width: 100px;
-    height: auto;
+
+/* Botão */
+a.btn {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    background: #007bff;
-    color: white;
-    padding: 5px 10px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.grid {
-    display: flex;
-    gap: 1rem;
-}
-.categoria {
-    background: white;
-    padding: 1rem;
-    border-radius: 5px;
-    flex: 1;
-    text-align: center;
-}
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+
+a.btn:hover {
+  background-color: #0056b3;
 }
