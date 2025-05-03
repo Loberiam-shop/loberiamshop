@@ -9,152 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --dark: #111827;
-      --light: #f9fafb;
-      --gray: #6b7280;
-      --radius: 12px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: white;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--dark);
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header nav a {
-      color: white;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .hero-text {
-      max-width: 500px;
-    }
-
-    .hero-text h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero-text p {
-      color: var(--gray);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero img {
-      max-width: 300px;
-      border-radius: var(--radius);
-    }
-
-    .btn {
-      background: var(--primary);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: var(--radius);
-      cursor: pointer;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    h2 {
-      margin-top: 4rem;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .products, .categories {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .card {
-      border: 1px solid #e5e7eb;
-      border-radius: var(--radius);
-      padding: 1rem;
-      width: 200px;
-      text-align: center;
-      background: var(--light);
-    }
-
-    .card img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 0.5rem;
-    }
-
-    .footer {
-      background: var(--dark);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-
-    .how-it-works {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .how-it-works div {
-      flex: 1;
-      min-width: 150px;
-    }
-
-    .cta {
-      background: #e0f2fe;
-      padding: 2rem;
-      text-align: center;
-      border-radius: var(--radius);
-      margin-top: 3rem;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <div><strong>LOBÉRIAM</strong></div>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#">Produtos</a>
-      <a href="#">Contato</a>
-      <a href="#">Entrar / Criar Conta</a>
-    </nav>
+
+  <header class="topo">
+    <div class="container">
+      <img src="assets/logo-loberiam.png" alt="Loberiam Shop" class="logo" />
+      <nav>
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+        <a href="#">Entrar / Criar Conta</a>
+      </nav>
+    </div>
   </header>
 
   <div class="container">
@@ -233,5 +100,7 @@
   <footer class="footer">
     &copy; 2025 Loberiam Shop - Todos os direitos reservados
   </footer>
+
 </body>
 </html>
+
