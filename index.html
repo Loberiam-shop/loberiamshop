@@ -6,247 +6,232 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loberiam Shop</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
+    :root {
+      --primary: #2563eb;
+      --dark: #111827;
+      --light: #f9fafb;
+      --gray: #6b7280;
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
     }
-    .modal-content {
-      background-color: #fff;
+
+    header nav a {
+      color: white;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 2rem;
-      border-radius: 8px;
-      max-width: 400px;
-      width: 90%;
-      position: relative;
     }
-    .close {
-      position: absolute;
-      right: 10px; top: 10px;
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
-    .modal h2 {
-      margin-bottom: 1rem;
-    }
-    .modal form input {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .modal form button {
-      padding: 0.5rem 1rem;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .tab-buttons {
+
+    .hero {
       display: flex;
-      justify-content: space-around;
-      margin-bottom: 1rem;
-    }
-    .tab-buttons button {
-      flex: 1;
-      padding: 0.5rem;
-      border: none;
-      background-color: #eee;
-      cursor: pointer;
-    }
-    .tab-buttons button.active {
-      background-color: #000;
-      color: #fff;
-    }
-    footer.full-footer {
-      background-color: #111;
-      color: #eee;
-      padding: 2rem;
-      display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      font-size: 0.9rem;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    footer.full-footer div {
-      flex: 1 1 200px;
-      margin: 0.5rem;
+
+    .hero-text {
+      max-width: 500px;
     }
-    footer.full-footer h3 {
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero img {
+      max-width: 300px;
+      border-radius: var(--radius);
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    h2 {
+      margin-top: 4rem;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .products, .categories {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius);
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      background: var(--light);
+    }
+
+    .card img {
+      width: 100px;
+      height: auto;
       margin-bottom: 0.5rem;
     }
-    footer.full-footer a {
-      color: #ccc;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 0.3rem;
+
+    .footer {
+      background: var(--dark);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .how-it-works {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .how-it-works div {
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .cta {
+      background: #e0f2fe;
+      padding: 2rem;
+      text-align: center;
+      border-radius: var(--radius);
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
-  <header class="topo">
-    <div class="container">
-      <img src="assets/logo.png" alt="Logo Loberiam" class="logo">
-      <nav>
-        <a href="#">Início</a>
-        <a href="#produtos">Produtos</a>
-        <a href="#contato">Contato</a>
-        <a href="sobre.html">Sobre nós</a>
-        <a href="#" id="btn-login">Entrar / Criar Conta</a>
-      </nav>
-    </div>
+  <header>
+    <div><strong>LOBÉRIAM</strong></div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Contato</a>
+      <a href="#">Entrar / Criar Conta</a>
+    </nav>
   </header>
 
-  <main>
+  <div class="container">
     <section class="hero">
       <div class="hero-text">
-        <h1>Bem-vindo à <br><strong>Loberiam Shop</strong></h1>
+        <h1>Bem-vindo à Loberiam Shop</h1>
         <p>Os melhores produtos, de diversos fornecedores, em um só lugar</p>
-        <ul>
-          <li>🛡️ Compra segura</li>
-          <li>🚚 Entrega rápida</li>
-          <li>🎯 Variedade para todos os gostos</li>
-        </ul>
-        <a class="btn" href="#produtos">Ver Produtos</a>
+        <a href="#produtos" class="btn">Ver Produtos</a>
       </div>
-      <div class="hero-img">
-        <img src="assets/produtos-iniciais.png" alt="Produtos em destaque">
-      </div>
+      <img src="assets/banner-produtos.png" alt="Produtos diversos">
     </section>
 
-    <section class="produtos" id="produtos">
-      <h2>Produtos em Destaque</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="assets/tv.png" alt="Televisivo">
-          <h3>Televisivo</h3>
-          <p>R$ 2.300,00</p>
-          <a href="#">Comprar Agora</a>
-        </div>
-        <div class="card">
-          <img src="assets/puncia-dac.png" alt="Puncia dac">
-          <h3>Puncia dac</h3>
-          <p>R$ 155,00</p>
-          <a href="#">Comprar Agora</a>
-        </div>
-        <div class="card">
-          <img src="assets/smartwatch.png" alt="Smartwatch">
-          <h3>Smartwatch</h3>
-          <p>R$ 300,00</p>
-          <a href="#">Comprar Agora</a>
-        </div>
-        <div class="card">
-          <img src="assets/lampanlar.png" alt="Lumpanlar">
-          <h3>Lumpanlar</h3>
-          <p>R$ 120,00</p>
-          <a href="#">Comprar Agora</a>
-        </div>
+    <h2 id="produtos">Produtos em Destaque</h2>
+    <div class="products">
+      <div class="card">
+        <img src="assets/tv.png" alt="Televisivo">
+        <h4>Televisivo</h4>
+        <p>R$ 2.300,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
       </div>
-    </section>
-
-    <section class="categorias">
-      <h2>Categorias Populares</h2>
-      <div class="grid">
-        <div class="categoria"><img src="assets/eletronicos.png"><span>Eletrônicos</span></div>
-        <div class="categoria"><img src="assets/moda.png"><span>Moda</span></div>
-        <div class="categoria"><img src="assets/casa-cozinha.png"><span>Casa e Cozinha</span></div>
-        <div class="categoria"><img src="assets/beleza.png"><span>Beleza</span></div>
+      <div class="card">
+        <img src="assets/dac.png" alt="Punxia dac">
+        <h4>Punxia dac</h4>
+        <p>R$ 155,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
       </div>
-    </section>
-
-    <section class="como-funciona" id="sobre">
-      <h2>Como Funciona?</h2>
-      <ul>
-        <li>🔍 Escolha o produto</li>
-        <li>🛡️ Compre com segurança</li>
-        <li>🚚 Receba em casa</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="full-footer" id="contato">
-    <div>
-      <h3>Loberiam Shop</h3>
-      <p>Compra inteligente com comodidade e segurança.</p>
+      <div class="card">
+        <img src="assets/smartwatch.png" alt="Smartwatch">
+        <h4>Smartwatch</h4>
+        <p>R$ 300,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
+      </div>
+      <div class="card">
+        <img src="assets/lamp.png" alt="Lâmpada">
+        <h4>Lampanlar</h4>
+        <p>R$ 120,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
+      </div>
     </div>
-    <div>
-      <h3>Institucional</h3>
-      <a href="sobre.html">Sobre nós</a>
-      <a href="#">Termos de uso</a>
-      <a href="#">Política de privacidade</a>
-    </div>
-    <div>
-      <h3>Ajuda</h3>
-      <a href="#">Dúvidas frequentes</a>
-      <a href="#">Fale conosco</a>
-      <a href="#">Como comprar</a>
-    </div>
-    <div>
-      <h3>Minha Conta</h3>
-      <a href="#">Entrar</a>
-      <a href="#">Cadastrar</a>
-      <a href="#">Meus pedidos</a>
-    </div>
-  </footer>
 
-  <div class="modal" id="modal-login">
-    <div class="modal-content">
-      <span class="close" id="fechar-modal">&times;</span>
-      <div class="tab-buttons">
-        <button id="btn-aba-login" class="active">Entrar</button>
-        <button id="btn-aba-cadastro">Criar Conta</button>
+    <h2>Categorias Populares</h2>
+    <div class="categories">
+      <div class="card">
+        <h4>Eletrônicos</h4>
       </div>
-      <div id="aba-login">
-        <h2>Entrar</h2>
-        <form>
-          <input type="email" placeholder="E-mail" required>
-          <input type="password" placeholder="Senha" required>
-          <button type="submit">Entrar</button>
-        </form>
+      <div class="card">
+        <h4>Moda</h4>
       </div>
-      <div id="aba-cadastro" style="display: none;">
-        <h2>Criar Conta</h2>
-        <form>
-          <input type="text" placeholder="Nome completo" required>
-          <input type="email" placeholder="E-mail" required>
-          <input type="password" placeholder="Senha" required>
-          <button type="submit">Cadastrar</button>
-        </form>
+      <div class="card">
+        <h4>Casa e Cozinha</h4>
       </div>
+      <div class="card">
+        <h4>Beleza</h4>
+      </div>
+    </div>
+
+    <h2>Como Funciona?</h2>
+    <div class="how-it-works">
+      <div>
+        <strong>1.</strong> Escolha o produto
+      </div>
+      <div>
+        <strong>2.</strong> Pague no marketplace
+      </div>
+      <div>
+        <strong>3.</strong> Receba em casa com segurança
+      </div>
+    </div>
+
+    <div class="cta">
+      <p><strong>É vendedor?</strong> Cadastre-se agora e comece a vender na Loberiam Shop!</p>
+      <a class="btn" href="#">Quero Vender na Loberiam</a>
     </div>
   </div>
 
-  <script>
-    document.getElementById("btn-login").addEventListener("click", () => {
-      document.getElementById("modal-login").style.display = "flex";
-    });
-    document.getElementById("fechar-modal").addEventListener("click", () => {
-      document.getElementById("modal-login").style.display = "none";
-    });
-    const abaLogin = document.getElementById("aba-login");
-    const abaCadastro = document.getElementById("aba-cadastro");
-    const btnAbaLogin = document.getElementById("btn-aba-login");
-    const btnAbaCadastro = document.getElementById("btn-aba-cadastro");
-    btnAbaLogin.addEventListener("click", () => {
-      abaLogin.style.display = "block";
-      abaCadastro.style.display = "none";
-      btnAbaLogin.classList.add("active");
-      btnAbaCadastro.classList.remove("active");
-    });
-    btnAbaCadastro.addEventListener("click", () => {
-      abaLogin.style.display = "none";
-      abaCadastro.style.display = "block";
-      btnAbaLogin.classList.remove("active");
-      btnAbaCadastro.classList.add("active");
-    });
-  </script>
+  <footer class="footer">
+    &copy; 2025 Loberiam Shop - Todos os direitos reservados
+  </footer>
 </body>
 </html>
-
