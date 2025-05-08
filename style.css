@@ -1,6 +1,6 @@
-/* RESET */
 * {
-  box-sizing: border-box;
+  
+box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -12,7 +12,6 @@ body {
   line-height: 1.5;
 }
 
-/* TOPO */
 header.topo {
   background: #111;
   padding: 10px 0;
@@ -26,6 +25,7 @@ header .container {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .logo-container {
@@ -34,7 +34,7 @@ header .container {
   gap: 10px;
 }
 
-header .logo {
+.logo {
   height: 50px;
 }
 
@@ -44,13 +44,24 @@ header .logo {
   font-weight: bold;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .search-container {
   display: flex;
   align-items: center;
   background: white;
   padding: 5px 10px;
   border-radius: 8px;
-  margin: 10px;
   flex-grow: 1;
   max-width: 400px;
 }
@@ -73,13 +84,8 @@ header .logo {
   font-size: 0.9rem;
 }
 
-.search-button i {
-  pointer-events: none;
-}
-
 .cart-icon {
   position: relative;
-  margin-left: 15px;
   color: white;
   font-size: 1.4rem;
   cursor: pointer;
@@ -94,18 +100,6 @@ header .logo {
   font-size: 0.7rem;
   padding: 2px 6px;
   border-radius: 50%;
-  font-weight: bold;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
   font-weight: bold;
 }
 
@@ -152,14 +146,9 @@ nav a {
   border-radius: 8px;
   display: inline-block;
   font-weight: bold;
-  transition: background 0.3s ease;
 }
 
-.btn:hover {
-  background: #1d4ed8;
-}
-
-h2 {
+h2, h3 {
   margin-top: 3rem;
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -189,122 +178,115 @@ h2 {
 }
 
 .categorias {
-  text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .categorias-lista {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 1rem;
+  gap: 15px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .categorias-lista button {
-  background-color: #2563eb;
-  color: white;
+  padding: 10px 20px;
   border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  font-weight: bold;
   cursor: pointer;
-  font-weight: 500;
   transition: background 0.3s;
 }
 
 .categorias-lista button:hover {
-  background-color: #1d4ed8;
+  background: #e5e7eb;
 }
 
-.how-it-works {
+.how-mini {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
 }
 
-.how-it-works div {
+.how-mini div {
   flex: 1;
-  min-width: 150px;
-  font-weight: bold;
 }
 
-.cta {
+.how-mini i {
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+.venda-banner {
   background: #e0f2fe;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   border-radius: 12px;
   margin-top: 3rem;
 }
 
 .footer {
-  background: #000;
+  background: #111;
   color: white;
-  padding: 3rem 2rem;
+  padding: 2rem;
   margin-top: 4rem;
-  font-size: 0.95rem;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
 }
 
 .footer-column h4 {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
-.footer-column p,
-.footer-column a {
-  color: #cccccc;
-  text-decoration: none;
+.footer-column a, .footer-column p {
   display: block;
-  margin-bottom: 0.5rem;
+  color: #ddd;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 0.9rem;
 }
 
 .footer-column a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer-bottom {
-  text-align: center;
   margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
   border-top: 1px solid #333;
   padding-top: 1rem;
-  color: #ccc;
-  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
-  .topo-flex {
+  header .container {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
   }
 
-  nav {
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .products,
-  .how-it-works,
-  .categorias-lista {
+  .hero {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+  }
+
+  .how-mini {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .footer-container {
     flex-direction: column;
-    text-align: center;
   }
 }
 
