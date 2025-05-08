@@ -1,3 +1,4 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +13,6 @@ body {
 }
 
 /* TOPO */
-
 header.topo {
   background: #111;
   padding: 10px 0;
@@ -43,8 +43,6 @@ header .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
-/* BARRA DE BUSCA */
 
 .search-container {
   display: flex;
@@ -79,8 +77,6 @@ header .logo {
   pointer-events: none;
 }
 
-/* CARRINHO */
-
 .cart-icon {
   position: relative;
   margin-left: 15px;
@@ -101,8 +97,6 @@ header .logo {
   font-weight: bold;
 }
 
-/* NAVEGAÇÃO */
-
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -115,15 +109,11 @@ nav a {
   font-weight: bold;
 }
 
-/* CONTAINER GERAL */
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 20px;
 }
-
-/* HERO SECTION */
 
 .hero {
   padding: 40px 0;
@@ -154,8 +144,6 @@ nav a {
   border-radius: 12px;
 }
 
-/* BOTÃO PADRÃO */
-
 .btn {
   background: #2563eb;
   color: white;
@@ -164,22 +152,19 @@ nav a {
   border-radius: 8px;
   display: inline-block;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #1d4ed8;
+  background: #1d4ed8;
 }
 
-/* TÍTULOS */
-
-h2, h3 {
+h2 {
   margin-top: 3rem;
   font-size: 1.8rem;
   margin-bottom: 1rem;
   text-align: center;
 }
-
-/* PRODUTOS */
 
 .products {
   display: flex;
@@ -203,40 +188,33 @@ h2, h3 {
   margin-bottom: 10px;
 }
 
-/* CATEGORIAS POPULARES */
-
 .categorias {
-  margin-top: 3rem;
   text-align: center;
-}
-
-.categorias h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
 }
 
 .categorias-lista {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
-.categoria-card {
-  background: #f3f4f6;
-  padding: 15px 25px;
-  border-radius: 8px;
-  font-weight: 600;
+.categorias-lista button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  font-weight: 500;
+  transition: background 0.3s;
 }
 
-.categoria-card:hover {
-  background: #e5e7eb;
+.categorias-lista button:hover {
+  background-color: #1d4ed8;
 }
-
-/* COMO FUNCIONA */
 
 .how-it-works {
   display: flex;
@@ -253,8 +231,6 @@ h2, h3 {
   font-weight: bold;
 }
 
-/* CTA */
-
 .cta {
   background: #e0f2fe;
   padding: 2rem;
@@ -263,40 +239,55 @@ h2, h3 {
   margin-top: 3rem;
 }
 
-/* RODAPÉ */
-
-footer {
-  background-color: #000000;
+.footer {
+  background: #000;
   color: white;
-  text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 2rem;
   margin-top: 4rem;
-}
-
-footer .links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 1rem;
-}
-
-footer .links a {
-  color: #9ca3af;
-  text-decoration: none;
   font-size: 0.95rem;
 }
 
-footer .links a:hover {
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
   color: #ffffff;
 }
 
-/* RESPONSIVO */
+.footer-column p,
+.footer-column a {
+  color: #cccccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  color: #ccc;
+  font-size: 0.85rem;
+}
 
 @media (max-width: 768px) {
-  .hero {
+  .topo-flex {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   nav {
@@ -305,25 +296,15 @@ footer .links a:hover {
   }
 
   .products,
-  .categories,
-  .how-it-works {
+  .how-it-works,
+  .categorias-lista {
     flex-direction: column;
     align-items: center;
   }
 
-  .topo-flex {
+  .footer-container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .search-container {
-    width: 100%;
-    margin: 0;
-  }
-
-  .cart-icon {
-    align-self: flex-end;
-    margin-top: 5px;
+    text-align: center;
   }
 }
+
