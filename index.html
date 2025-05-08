@@ -4,35 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loberiam Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
   <header class="topo">
     <div class="container topo-flex">
-      <!-- Logo + nome -->
       <div class="logo-container">
         <img src="assets/logo-loberiam.png" alt="Loberiam Shop" class="logo" />
         <span class="logo-text">Loberiam Shop</span>
       </div>
 
-      <!-- Barra de busca -->
       <div class="search-container">
         <input type="text" placeholder="Buscar produtos..." class="search-input">
         <button class="search-button"><i class="fas fa-search"></i></button>
       </div>
 
-      <!-- Carrinho -->
       <div class="cart-icon">
         <i class="fas fa-shopping-cart"></i>
         <span class="cart-count">0</span>
       </div>
 
-      <!-- Navegação -->
       <nav>
         <a href="#">Início</a>
         <a href="#produtos">Produtos</a>
@@ -82,27 +77,21 @@
     </div>
 
     <section id="categorias" class="categorias">
-  <h3>Categorias Populares</h3>
-  <div class="categorias-lista">
-    <div class="categoria-card">Eletrônicos</div>
-    <div class="categoria-card">Moda</div>
-    <div class="categoria-card">Casa & Jardim</div>
-    <div class="categoria-card">Beleza</div>
-    <div class="categoria-card">Esportes</div>
-  </div>
-</section>
+      <h3>Categorias</h3>
+      <div class="categorias-lista">
+        <button>Eletrônicos</button>
+        <button>Moda</button>
+        <button>Casa & Jardim</button>
+        <button>Beleza</button>
+        <button>Esportes</button>
+      </div>
+    </section>
 
     <h2>Como Funciona?</h2>
     <div class="how-it-works">
-      <div>
-        <strong>1.</strong> Escolha o produto
-      </div>
-      <div>
-        <strong>2.</strong> Pague no marketplace
-      </div>
-      <div>
-        <strong>3.</strong> Receba em casa com segurança
-      </div>
+      <div><strong>1.</strong> Escolha o produto</div>
+      <div><strong>2.</strong> Pague no marketplace</div>
+      <div><strong>3.</strong> Receba em casa com segurança</div>
     </div>
 
     <div class="cta">
@@ -111,15 +100,40 @@
     </div>
   </div>
 
-<footer>
-  <div class="links">
-    <a href="#">Política de Privacidade</a>
-    <a href="#">Termos de Uso</a>
-    <a href="#">Devoluções</a>
-    <a href="#">Suporte</a>
-  </div>
-  <p>&copy; 2025 Loberiam Shop. Todos os direitos reservados.</p>
-</footer>
-
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Loberiam Shop</h4>
+        <p>Compra inteligente com comodidade e segurança.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Dúvidas frequentes</a></li>
+          <li><a href="#">Fale conosco</a></li>
+          <li><a href="#">Como comprar</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Minha Conta</h4>
+        <ul>
+          <li><a href="#">Entrar</a></li>
+          <li><a href="#">Cadastrar</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Loberiam Shop — Todos os direitos reservados.
+    </div>
+  </footer>
 </body>
 </html>
