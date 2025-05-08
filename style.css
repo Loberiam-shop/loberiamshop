@@ -166,9 +166,13 @@ nav a {
   font-weight: bold;
 }
 
+.btn:hover {
+  background-color: #1d4ed8;
+}
+
 /* TÍTULOS */
 
-h2 {
+h2, h3 {
   margin-top: 3rem;
   font-size: 1.8rem;
   margin-bottom: 1rem;
@@ -199,24 +203,37 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* CATEGORIAS */
+/* CATEGORIAS POPULARES */
 
-.categories {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 1rem;
-  flex-wrap: wrap;
+.categorias {
+  margin-top: 3rem;
+  text-align: center;
 }
 
-.categories .card {
-  flex: 1;
-  min-width: 150px;
-  background-color: #f3f4f6;
-  font-weight: bold;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
+.categorias h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.categorias-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.categoria-card {
+  background: #f3f4f6;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.categoria-card:hover {
+  background: #e5e7eb;
 }
 
 /* COMO FUNCIONA */
@@ -248,12 +265,30 @@ h2 {
 
 /* RODAPÉ */
 
-.footer {
-  background: #111827;
+footer {
+  background-color: #111827;
   color: white;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem 1rem;
   margin-top: 4rem;
+}
+
+footer .links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+footer .links a:hover {
+  color: #ffffff;
 }
 
 /* RESPONSIVO */
@@ -292,4 +327,3 @@ h2 {
     margin-top: 5px;
   }
 }
-
