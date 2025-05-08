@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loberiam Shop</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,21 +22,21 @@
 
       <div class="header-right">
         <nav>
-          <a href="#inicio">Início</a>
+          <a href="#">Início</a>
           <a href="#produtos">Produtos</a>
           <a href="sobre.html">Sobre nós</a>
-          <a href="#contato">Contato</a>
-          <a href="javascript:void(0)">Entrar / Criar Conta</a>
+          <a href="#">Contato</a>
+          <a href="#">Entrar / Criar Conta</a>
         </nav>
 
         <div class="search-cart">
           <div class="search-container">
-            <input type="text" class="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
-            <button class="search-button" aria-label="Buscar">
+            <input type="text" class="search-input" placeholder="Buscar produtos..." />
+            <button class="search-button">
               <i class="fas fa-search"></i>
             </button>
           </div>
-          <div class="cart-icon" aria-label="Carrinho de compras">
+          <div class="cart-icon">
             <i class="fas fa-shopping-cart"></i>
             <span class="cart-count">0</span>
           </div>
@@ -45,72 +45,66 @@
     </div>
   </header>
 
-  <main class="container" id="inicio">
+  <div class="container">
     <section class="hero">
       <div class="hero-text">
         <h1>Bem-vindo à Loberiam Shop</h1>
         <p>Os melhores produtos, de diversos fornecedores, em um só lugar</p>
         <a href="#produtos" class="btn">Ver Produtos</a>
       </div>
-      <img src="assets/produtos-iniciais.png" alt="Produtos diversos" />
+      <img src="assets/produtos-iniciais.png" alt="Produtos diversos">
     </section>
 
-    <section>
-      <h2 id="produtos">Produtos em Destaque</h2>
-      <div class="products">
-        <div class="card">
-          <img src="assets/tv.png" alt="Televisivo" />
-          <h4>Televisivo</h4>
-          <p>R$ 2.300,00</p>
-          <a class="btn" href="javascript:void(0)">Comprar Agora</a>
-        </div>
-        <div class="card">
-          <img src="assets/puncia-dac.png" alt="Punxia dac" />
-          <h4>Punxia dac</h4>
-          <p>R$ 155,00</p>
-          <a class="btn" href="javascript:void(0)">Comprar Agora</a>
-        </div>
-        <div class="card">
-          <img src="assets/smartwatch.png" alt="Smartwatch" />
-          <h4>Smartwatch</h4>
-          <p>R$ 300,00</p>
-          <a class="btn" href="javascript:void(0)">Comprar Agora</a>
-        </div>
-        <div class="card">
-          <img src="assets/lampanlar.png" alt="Lâmpada Lampanlar" />
-          <h4>Lampanlar</h4>
-          <p>R$ 120,00</p>
-          <a class="btn" href="javascript:void(0)">Comprar Agora</a>
-        </div>
+    <h2 id="produtos">Produtos em Destaque</h2>
+    <div class="products">
+      <div class="card">
+        <img src="assets/tv.png" alt="Televisivo">
+        <h4>Televisivo</h4>
+        <p>R$ 2.300,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
       </div>
-    </section>
-
-    <section>
-      <h2>Categorias Populares</h2>
-      <div class="categories">
-        <div class="card"><h4>Eletrônicos</h4></div>
-        <div class="card"><h4>Moda</h4></div>
-        <div class="card"><h4>Casa e Cozinha</h4></div>
-        <div class="card"><h4>Beleza</h4></div>
+      <div class="card">
+        <img src="assets/puncia-dac.png" alt="Punxia dac">
+        <h4>Punxia dac</h4>
+        <p>R$ 155,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
       </div>
-    </section>
-
-    <section>
-      <h2>Como Funciona?</h2>
-      <div class="how-it-works">
-        <div><strong>1.</strong> Escolha o produto</div>
-        <div><strong>2.</strong> Pague no marketplace</div>
-        <div><strong>3.</strong> Receba em casa com segurança</div>
+      <div class="card">
+        <img src="assets/smartwatch.png" alt="Smartwatch">
+        <h4>Smartwatch</h4>
+        <p>R$ 300,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
       </div>
-    </section>
+      <div class="card">
+        <img src="assets/lampanlar.png" alt="Lâmpada">
+        <h4>Lampanlar</h4>
+        <p>R$ 120,00</p>
+        <a class="btn" href="#">Comprar Agora</a>
+      </div>
+    </div>
 
-    <section class="cta">
+    <h2>Categorias Populares</h2>
+    <div class="categories">
+      <div class="card"><h4>Eletrônicos</h4></div>
+      <div class="card"><h4>Moda</h4></div>
+      <div class="card"><h4>Casa e Cozinha</h4></div>
+      <div class="card"><h4>Beleza</h4></div>
+    </div>
+
+    <h2>Como Funciona?</h2>
+    <div class="how-it-works">
+      <div><strong>1.</strong> Escolha o produto</div>
+      <div><strong>2.</strong> Pague no marketplace</div>
+      <div><strong>3.</strong> Receba em casa com segurança</div>
+    </div>
+
+    <div class="cta">
       <p><strong>É vendedor?</strong> Cadastre-se agora e comece a vender na Loberiam Shop!</p>
-      <a class="btn" href="javascript:void(0)">Quero Vender na Loberiam</a>
-    </section>
-  </main>
+      <a class="btn" href="#">Quero Vender na Loberiam</a>
+    </div>
+  </div>
 
-  <footer class="footer" id="contato">
+  <footer class="footer">
     &copy; 2025 Loberiam Shop - Todos os direitos reservados
   </footer>
 
