@@ -49,9 +49,37 @@
       <img src="assets/produtos-iniciais.png" alt="Produtos diversos" />
     </section>
 
+    <!-- Carrossel rotativo -->
+    <section class="carousel">
+      <div class="carousel-container">
+        <div class="slide active">
+          <img src="assets/banner1.jpg" alt="Promoção 1">
+          <div class="slide-text">
+            <h3>Super Ofertas da Semana</h3>
+            <a href="#" class="btn">Ver Oferta</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/banner2.jpg" alt="Novidades">
+          <div class="slide-text">
+            <h3>Novidades em Tecnologia</h3>
+            <a href="#" class="btn">Comprar Agora</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="assets/banner3.jpg" alt="Descontos">
+          <div class="slide-text">
+            <h3>Descontos de até 50%</h3>
+            <a href="#" class="btn">Aproveitar</a>
+          </div>
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </section>
+
     <h2 id="produtos">Produtos em Destaque</h2>
     <div class="products">
-      <!-- Cards de produto -->
       <div class="card">
         <img src="assets/tv.png" alt="Televisivo" />
         <h4>Televisivo</h4>
@@ -135,6 +163,34 @@
     <hr />
     <p>&copy; 2025 Loberiam Shop — Todos os direitos reservados.</p>
   </footer>
+
+  <!-- JavaScript do carrossel -->
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[i].classList.add('active');
+    }
+
+    next.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    });
+
+    prev.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      showSlide(index);
+    });
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 5000);
+  </script>
 
 </body>
 </html>
