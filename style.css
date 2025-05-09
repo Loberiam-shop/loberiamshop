@@ -290,3 +290,65 @@ h2, h3 {
   }
 }
 
+/* BANNER "COMO FUNCIONA" COMPACTO */
+.info-banner {
+  background: #f9fafb;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  margin: 3rem 0 1rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+/* BANNER DE VENDA DISCRETO */
+.venda-banner {
+  background: #e0f2fe;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.venda-banner .btn {
+  margin-top: 1rem;
+}
+
+/* RODAPÉ COM LISTAS ESTILIZADAS */
+.footer {
+  background: #111;
+  color: white;
+  padding: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+  gap: 2rem;
+}
+
+.footer h4 {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul {
+  list-style-type: disc;
+  margin-left: 1.2rem;
+  line-height: 1.8;
+}
+
+.footer ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer hr {
+  border-color: #333;
+  margin: 2rem 0 1rem;
+}
